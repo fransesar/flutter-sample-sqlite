@@ -26,7 +26,7 @@ class HomePageState extends State<HomePage> {
     setState(() {});
   }
 
-  edit(String id){
+  editUser(String id){
     var u = usernameEdit.text;
     var e = emailEdit.text;
     sqliteHelper.updateUser(User('', u, e),id);
@@ -277,7 +277,7 @@ class HomePageState extends State<HomePage> {
                                                           ),
                                                           onPressed: () {
                                                             if (formKey2.currentState.validate()) {
-                                                              edit(snapshot.data[index].id);
+                                                              editUser(snapshot.data[index].id);
                                                               Navigator.pop(context);
                                                             }
                                                           },
