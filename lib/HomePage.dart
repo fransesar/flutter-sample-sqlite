@@ -17,7 +17,7 @@ class HomePageState extends State<HomePage> {
   var usernameEdit = TextEditingController();
   var emailEdit = TextEditingController();
   var passwordEdit = TextEditingController();
-  var sqliteHelper = new SQLiteHelper();
+  var sqliteHelper = SQLiteHelper();
 
   save() {
     var u = username.text;
